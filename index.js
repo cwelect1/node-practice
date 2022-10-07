@@ -1,7 +1,7 @@
 import { readdir } from 'fs/promises'
 
 const fs = require('fs/promises');
-
+/*
 const getFilteredResultsFromAllTestRuns1 = (resultsPath, testCaseFilter) => {
   return new Promise ((resolve, error) => {
     getDirectories(resultsPath)
@@ -20,15 +20,21 @@ const getFilteredResultsFromAllTestRuns1 = (resultsPath, testCaseFilter) => {
                   return app;
                 }
               })
-              .then((stuff) => {/*console.log("stuffy: " + JSON.stringify(stuff)); */resolve(stuff)})
+              .then((stuff) => {
+                //console.log("stuffy: " + JSON.stringify(stuff)); 
+                resolve(stuff)})
               .catch(error)
             })
-            .then((stuff) => {/*console.log(JSON.stringify(stuff));*/ resolve(stuff)})
+            .then((stuff) => {
+              //console.log(JSON.stringify(stuff)); 
+              resolve(stuff)})
             .catch(error)
               console.log("App2: " + app)
           })
         })
-        .then((stuff) => {/*console.log(JSON.stringify(stuff));*/ resolve(stuff)})
+        .then((stuff) => {
+          //console.log(JSON.stringify(stuff)); 
+          resolve(stuff)})
         .catch(error)
         console.log("App3: "+ app)
       })
@@ -38,7 +44,7 @@ const getFilteredResultsFromAllTestRuns1 = (resultsPath, testCaseFilter) => {
       .catch(error)
   })    
 }
-
+*/
 const getFilteredResultsFromAllTestRuns = (resultsPath, testCaseFilter) => {
   return new Promise((resolve, reject) => {
     getDirectories(resultsPath)

@@ -1,0 +1,55 @@
+[
+  { "app": "AccountHealthCheck",
+    "suites": [
+      {
+        "name": "AHC- Events Feed",
+        "testCases": [
+          "failed   TC-001 - getAllEventsByStudent for a RC student,it should return all events with 200 status code",
+          "failed   TC-001 - nonAcademicEvents for student that has NO nonacademic event,it should return blank with 200 status code",
+          "failed   TC-002 - getAllEventsByStudent for an EC student,it should return all events with 200 status code",
+          "failed   TC-002 - nonAcademicEvents for student that has nonacademic events,it should return list of events and 200 status code",
+          "failed   TC-003 - getAllEventsByStudent for faculty,it should return all events with 200 status code",
+          "failed   TC-003 - nonAcademicEvents for faculty/staff that has nonacademic events,it should return value with 200 status code",
+          "failed   TC-004 - getAllEventsByStudent for Staff,it should return blank events with 200 status code",
+          "failed   TC-004 - nonAcademicEvents for faculty/staff that has NO nonacademic events,it should return blank with 200 status code",
+          "failed   TC-005 - getAllEventsByStudent, it should return correct content-type and schema in JSON format",
+          "failed   TC-005 - nonAcademicEvents, it should return correct content-type and schema in JSON format"
+        ]
+      },
+      {
+        "name": "AHC- Lesson Events",
+        "testCases": [
+          "failed   TC-001 - lessonEvents for RC student, it should return all lesson events with 200 status code",
+          "failed   TC-002 - lessonEvents for EC student, it should return all lesson events with 200 status code",
+          "failed   TC-003 - lessonEvents for faculty, it should not return any events with 200 status code",
+          "failed   TC-004 - lessonEvents, it should return correct content-type and schema in JSON format",
+          "failed   TC-001 - lessonEvents ics for RC student, it should return 200 status code",
+          "failed   TC-002 - lessonEvents ics for EC student, it should return 200 status code",
+          "failed   TC-003 - lessonEvents ics for faculty, it should return 200 status code",
+          "failed   TC-004 - lessonEvents ics, it should return correct content-type and schema in text format"
+        ]
+      }
+  },
+  { "app": "CEWS",
+    "suites": [
+      {
+        "name": "CEWS- getAllEventsByStudentAsICS",
+        "testCases": [
+          "failed   TC-001 - getAllEventsByStudentAsICS ics for a RC student,it should return 200 status code",
+          "failed   TC-002 - getAllEventsByStudentAsICS ics for an EC student,it should return 200 status code",
+          "failed   TC-003 - getAllEventsByStudentAsICS ics for faculty,it should return 200 status code",
+          "failed   TC-004 - getAllEventsByStudentAsICS, it should return correct content-type and schema in JSON format"
+        ]
+      },
+      {
+        "name": "CEWS- TCV Events",
+        "testCases": [
+          "failed   TC-001 - TCVEvents for RC student who has no TCV,it should return 200 status code",
+          "failed   TC-002 - TCVEvents for Doctoral student who has TCV,it should return non-empty event list with 200 status code",
+          "failed   TC-003 - TCVEvents for faculty,it should return 200 status code",
+          "failed   TC-004 - TCVEvents, it should return correct content-type and schema in JSON format"
+        ]
+      }
+    ]
+  }
+]

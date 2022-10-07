@@ -1,5 +1,12 @@
 # Get Failed Tests from Allure Report
 
+Current Bugs: 
+1. No data being returned to caller of "getFilteredResultsFromAllTestRuns"
+    suites array is getting populated, but not returned syncronously
+    I have promise issues. ;(
+2. Code's a mess...cleanup naming, commented out code, etc...
+3. Hard coded file paths/names.
+
 Write a function that:
 - Reads /data/suites.json
 - Parses each suite
